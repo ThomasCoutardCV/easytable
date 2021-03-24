@@ -24,7 +24,7 @@ public class ParagraphCellDrawer extends AbstractCellDrawer<ParagraphCell> {
         ALIGNMENT_MAP.put(HorizontalAlignment.LEFT, Alignment.Left);
         ALIGNMENT_MAP.put(HorizontalAlignment.RIGHT, Alignment.Right);
         ALIGNMENT_MAP.put(HorizontalAlignment.CENTER, Alignment.Center);
-        ALIGNMENT_MAP.put(HorizontalAlignment.JUSTIFY, Alignment.Justify);
+        //ALIGNMENT_MAP.put(HorizontalAlignment.JUSTIFY, Alignment.Justify);
     }
 
     public ParagraphCellDrawer(ParagraphCell cell) {

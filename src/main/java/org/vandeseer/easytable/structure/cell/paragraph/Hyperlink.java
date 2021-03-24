@@ -43,9 +43,12 @@ public class Hyperlink implements ParagraphProcessable {
         paragraph.add(
                 new AnnotatedStyledText(
                         getText(),
-                        getFontSize() != null ? getFontSize() : settings.getFontSize(),
-                        getFont() != null ? getFont() : settings.getFont(),
-                        getColor(),
+                        null,
+                        //getFontSize() != null ? getFontSize() : settings.getFontSize(),
+                        //getFont() != null ? getFont() : settings.getFont(),
+                        //getColor(),
+                        null,
+                        0,
                         getBaselineOffset(),
                         Collections.singleton(hyperlink)
                 )
