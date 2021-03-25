@@ -1,8 +1,10 @@
 package org.vandeseer.easytable.structure;
 
 import lombok.*;
+import org.apache.pdfbox.pdmodel.common.PDRectangle;
 import org.apache.pdfbox.pdmodel.font.PDFont;
 import org.apache.pdfbox.pdmodel.font.PDType1Font;
+import org.jetbrains.annotations.NotNull;
 import org.vandeseer.easytable.settings.*;
 import org.vandeseer.easytable.structure.cell.AbstractCell;
 
@@ -314,6 +316,13 @@ public class Table {
             return rows.stream()
                     .flatMapToInt(row -> row.getCells().stream().mapToInt(cell -> cell.getRowSpan() * cell.getColSpan()))
                     .sum();
+        }
+
+        public TableBuilder addPercentGridColumns(float width) {
+            for (int i = 0; i < 100; i++) {
+                addColumnOfWidth(width / 100);
+            }
+            return this;
         }
 
         private class TableSetupException extends RuntimeException {

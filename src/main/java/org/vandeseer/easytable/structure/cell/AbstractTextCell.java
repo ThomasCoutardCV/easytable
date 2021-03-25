@@ -4,6 +4,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.experimental.SuperBuilder;
 import org.apache.pdfbox.pdmodel.font.PDFont;
+import org.jetbrains.annotations.Nullable;
 import org.vandeseer.easytable.structure.Column;
 import org.vandeseer.easytable.util.PdfUtil;
 
@@ -31,6 +32,11 @@ public abstract class AbstractTextCell extends AbstractCell {
     public Color getTextColor() {
         return settings.getTextColor();
     }
+
+    public Color getBackgroundTextColor(Color color) {
+        return color;
+    }
+
 
     private Float textHeight;
 
